@@ -1,7 +1,7 @@
 const Discord = require('discord.js')
 //! Improve!!!
 module.exports = {
-    commands: 'ping',
+    commands: ['ping', 'pong'],
     description: 'Pong!',
     callback: (message, arguments, text, client) => {
         message.channel.send('_Loading..._').then((resultMessage) => {
