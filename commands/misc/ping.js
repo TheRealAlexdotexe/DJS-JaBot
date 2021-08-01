@@ -1,5 +1,5 @@
 const Discord = require('discord.js')
-
+//! Improve!!!
 module.exports = {
     commands: 'ping',
     description: 'Pong!',
