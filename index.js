@@ -1,4 +1,8 @@
-// JaBotDB
+// Database name: JaBotDB
+// git push origin master --force
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+// Do this to update the git repo
+// (--force is optional)
 const colors = require('colors')
 const path = require('path')
 const fs = require('fs')
