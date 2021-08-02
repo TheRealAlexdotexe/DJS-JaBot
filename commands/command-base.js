@@ -50,7 +50,7 @@
    }
  }
  
-const recentlyRan = []
+const recentlyRan = [] // guildId-userId-command
 
  module.exports = (client, commandOptions) => {
    let {
