@@ -6,6 +6,7 @@ module.exports = {
     description: 'Adds balance out of thin air (Testing Purposes Only)',
     minArgs: 2,
     maxArgs: 2,
+    cooldown: 60 * 2,
     expectedArgs: ["<The target's @> <coin amount>"],
     permissionError: ':x: | You must be an administrator to execute this command. (Testing Purposes Only)',
     permissions: ['ADMINISTRATOR'],

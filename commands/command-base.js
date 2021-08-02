@@ -50,6 +50,8 @@
    }
  }
  
+const recentlyRan = []
+
  module.exports = (client, commandOptions) => {
    let {
      commands,
@@ -57,6 +59,7 @@
      permissionError = ':x: | Invalid Perms!',
      minArgs = 0,
      maxArgs = null,
+     cooldown = -1,
      permissions = [],
      requiredRoles = [],
      callback,
