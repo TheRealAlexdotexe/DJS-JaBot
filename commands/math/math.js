@@ -4,6 +4,7 @@ module.exports = {
     category: 'Math',
     commands: ['math', 'mth', 'equation'],
     description: 'Does math lmao',
+    cooldown: 10,
     minArgs: 1,
     expectedArgs: '<equation>',
     callback: async (message, argument, text) => {
