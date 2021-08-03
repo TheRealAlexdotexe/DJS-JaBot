@@ -117,7 +117,7 @@ module.exports = (client, commandOptions) => {
         }
 
         // Ensure the user has not ran this command too frequently
-        let cooldownString = ''
+        let cooldownString = `${guild.id}-${member.id}-${commands[0]}`
         if (cooldown > 0 && recentlyRan.includes(cooldownString)) {
           message.reply(':x: | Please wait a little longer before you execute this command again!')
           return
