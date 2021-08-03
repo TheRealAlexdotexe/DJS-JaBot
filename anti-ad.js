@@ -20,7 +20,7 @@ module.exports = (client) => {
         if (content.includes('discord.gg/')) {
             const isOurInvite = await isInvite(guild, code)
             if (!isOurInvite) {
-                if (message.channel.id == 868200415693508629) return;
+                if (message.channel.id == 817498658454241291) return
                 message.reply('*Nu!* | Please do not advertise any servers. Only in #friends-self-promo')
                 message.delete()
             }
