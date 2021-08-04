@@ -4,6 +4,7 @@ module.exports = {
   commands: ['balance', 'bal'],
   description: 'Shows balance',
   maxArgs: 1,
+  cooldown: 5,
   expectedArgs: "[Target user's @]",
   callback: async (message) => {
     const target = message.mentions.users.first() || message.author
