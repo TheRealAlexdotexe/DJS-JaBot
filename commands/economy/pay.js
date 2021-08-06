@@ -1,6 +1,8 @@
 const economy = require('../../economy')
 const Discord = require('discord.js')
 
+// TODO: Fix thingy
+
 module.exports = {
   commands: 'pay',
   description: 'Gives someone money',
