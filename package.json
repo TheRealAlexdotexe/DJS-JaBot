@@ -1,6 +1,6 @@
 {
-  "name": "test_bot",
-  "version": "1.0.0",
+  "name": "jabot",
+  "version": "0.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
