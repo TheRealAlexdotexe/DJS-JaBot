@@ -21,7 +21,7 @@ module.exports = {
       return
     }
 
-    const coinsToGive = arguments[1]
+    const coinsToGive = +arguments[1]
     if (isNaN(coinsToGive)) {
       const errorTwoEmbed = new Discord.MessageEmbed()
       .setColor("#E92222")
