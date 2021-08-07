@@ -5,8 +5,8 @@ module.exports = {
     commands: ['rank', 'level'],
     description: 'Shows your worklevel/rank',
     cooldown: 5,
-    callback: (message) => {
-        const results = jobSchema.findOne({
+    callback: async (message) => {
+        const results = await jobSchema.findOne({
             guildId: message.guild.id,
             userId: message.author.id,
         })
