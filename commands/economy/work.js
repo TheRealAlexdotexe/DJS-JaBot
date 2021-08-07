@@ -3,6 +3,7 @@ const jobSchema = require('../../schemas/job-schema')
 const mongo = require('../../mongo')
 const levels = require('../../levels')
 const DiscordJS = require('discord.js')
+const colors = require('colors')
 
 module.exports = {
     commands: ['work', 'job'],
@@ -17,16 +18,14 @@ module.exports = {
             userId: message.author.id
         })
 
-        const coinsEarned = +results.level ^ 3 * 10
-
-        console.log(results.level)
+        const coinsEarned = results.level * results.level * results.level
 
         const newBalance = economy.addCoins(message.guild.id, message.author.id, coinsEarned)
 
         const embed = new DiscordJS.MessageEmbed()
         .setColor('RANDOM')
         .setTitle(`You went to work!`)
-        .setDescription(`You earned ${coinsEarned} coins!\nYou now have ${newBalance} coins!`)
+        .setDescription(`You earned ${coinsEarned} coins!`)
 
         message.reply(embed)
     }
