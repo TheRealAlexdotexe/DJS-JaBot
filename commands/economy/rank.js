@@ -11,8 +11,6 @@ module.exports = {
             userId: message.author.id,
         })
 
-        const bruh = results.level
-
-        message.reply(`You are level ${bruh}!`)
+        message.reply(`You are level ${results.level}!`)
     }
 }
