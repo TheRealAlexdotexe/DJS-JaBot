@@ -5,7 +5,7 @@ const economy = require('../../economy')
 module.exports = {
     commands: ['rob', 'steal'],
     description: 'Rob someone!',
-    cooldown: 60 * 5,
+    cooldown: 60 * 2,
     minArgs: 1,
     maxArgs: 1,
     expectedArgs: "<Target's @>",
