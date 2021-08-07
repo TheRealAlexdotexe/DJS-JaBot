@@ -11,6 +11,10 @@ module.exports = {
             userId: message.author.id,
         })
 
+        if (results === null) {
+            message.reply('That user is unemployed!')
+        }
+
         message.reply(`You are level ${results.level}!`)
     }
 }
