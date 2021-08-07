@@ -2,7 +2,7 @@ const levels = require('../../levels')
 const jobSchema = require('../../schemas/job-schema')
 
 module.exports = {
-    commands: ['worklevel', 'workrank', 'rank', 'level'],
+    commands: ['rank', 'level'],
     description: 'Shows your worklevel/rank',
     cooldown: 5,
     callback: (message) => {
@@ -11,8 +11,8 @@ module.exports = {
             userId: message.author.id,
         })
 
-        const level = results.level
+        const bruh = results.level
 
-        message.reply(`You are level ${level}!`)
+        message.reply(`You are level ${bruh}!`)
     }
 }
