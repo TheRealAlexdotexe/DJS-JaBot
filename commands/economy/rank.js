@@ -24,7 +24,7 @@ module.exports = {
                     message.reply(results.level)
                 }
             } finally {
-
+                mongoose.connection.close()
             }
         })
 
