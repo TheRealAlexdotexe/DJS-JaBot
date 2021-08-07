@@ -8,7 +8,7 @@ module.exports = {
     commands: ['work', 'job'],
     description: 'Work lol',
     maxArgs: 0,
-    cooldown: 60 * 2,
+    cooldown: 1,
     callback: async (message) => {
         levels.addXP(message.guild.id, message.author.id, 50, message)
 
