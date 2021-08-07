@@ -8,7 +8,7 @@ module.exports = {
     cooldown: 5,
     callback: async (message) => {
         const guildId = message.guild.id
-        const userId = message.user.id
+        const userId = message.author.id
 
         await mongo().then(async mongoose => {
             try {
