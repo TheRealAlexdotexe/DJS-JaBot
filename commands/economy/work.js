@@ -21,12 +21,12 @@ module.exports = {
 
         console.log(results.level)
 
-        economy.addCoins(message.guild.id, message.author.id, coinsEarned)
+        const newBalance = economy.addCoins(message.guild.id, message.author.id, coinsEarned)
 
         const embed = new DiscordJS.MessageEmbed()
         .setColor('RANDOM')
         .setTitle(`You went to work!`)
-        .setDescription(`You earned ${coinsEarned} coins!`)
+        .setDescription(`You earned ${coinsEarned} coins!\nYou now have ${newBalance} coins!`)
 
         message.reply(embed)
     }
