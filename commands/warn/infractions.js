@@ -17,7 +17,7 @@ module.exports = {
     minArgs: 1,
     expectedArgs: "<Target User's @",
     requiredRoles: ['Endermen'],
-    callback: async (message, agreements, text) => {
+    callback: async (message, arguments, text) => {
         const target = message.mentions.users.first()
         if (!target) {
             message.reply(':x: | Please specify a target!')
