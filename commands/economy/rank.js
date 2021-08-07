@@ -21,13 +21,11 @@ module.exports = {
                     message.reply('That user is unemployed!')
                     return
                 } else {
-                    message.reply(results.level)
+                    message.reply(`You are level ${results.level}! (Salary: ${results.level * results.level * results.level})`)
                 }
             } finally {
                 mongoose.connection.close()
             }
         })
-
-        message.reply(`You are level ${results.level}!`)
     }
 }
