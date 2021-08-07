@@ -1,5 +1,5 @@
 const economy = require('../../economy')
-const Discord = require('discord.js')
+const DiscordJS = require('discord.js')
 
 // TODO: Fix thingy
 
@@ -14,7 +14,7 @@ module.exports = {
 
     const target = message.mentions.users.first()
     if (!target) {
-      const errorOneEmbed = new Discord.MessageEmbed()
+      const errorOneEmbed = new DiscordJS.MessageEmbed()
       .setColor("#E92222")
       .setDescription(':x: | **Please** specify a target!')
       message.reply(errorOneEmbed)
@@ -23,7 +23,7 @@ module.exports = {
 
     const coinsToGive = +arguments[1]
     if (isNaN(coinsToGive)) {
-      const errorTwoEmbed = new Discord.MessageEmbed()
+      const errorTwoEmbed = new DiscordJS.MessageEmbed()
       .setColor("#E92222")
       .setDescription(':x: | **Invalid** number of coins!')
       message.reply(errorTwoEmbed)
@@ -31,7 +31,7 @@ module.exports = {
     }
 
     if (coinsToGive<0) {
-        const errorThreeEmbed = new Discord.MessageEmbed()
+        const errorThreeEmbed = new DiscordJS.MessageEmbed()
         .setColor("#E92222")
         .setDescription(':x: | Tryna rob someone huh?')
 
@@ -53,9 +53,9 @@ module.exports = {
     const newBalance = await economy.addCoins(guild.id, target.id, coinsToGive)
 
     const triBackTick = '```'
-    const successEmbed = new Discord.MessageEmbed()
+    const successEmbed = new DiscordJS.MessageEmbed()
     .setColor("#009206")
-    .setTitle(`Successfully gave <@${target.id}> ${coinsToGive} coins`)
+    .setTitle(`Successfully gave ${coinsToGive} coins`)
     .addFields(
       { name: 'Their Balance:', value: `${triBackTick}\nOld Balance: ${newBalance - coinsToGive}\nNew Balance: ${newBalance}\n${triBackTick}` },
       { name: 'Your Balance:', value: `${triBackTick}\nOld Balance: ${remainingCoins + coinsToGive}\nNew Balance: ${remainingCoins}\n${triBackTick}`}

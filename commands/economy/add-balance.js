@@ -1,5 +1,5 @@
 const economy = require('../../economy')
-const Discord = require('discord.js')
+const DiscordJS = require('discord.js')
 
 module.exports = {
     commands: ['addbalance', 'addbal', 'ab'],
@@ -30,7 +30,7 @@ module.exports = {
         const newCoins = await economy.addCoins(guildId, userId, coins)
 
         const triBackTick = '```'
-        const replyEmbed = new Discord.MessageEmbed()
+        const replyEmbed = new DiscordJS.MessageEmbed()
         .setColor("#009206")
         .setDescription(`Successfully added ${coins} to <@${userId}>'s wallet!`)
         .addField('Balance:', `${triBackTick}\nOld Balance: ${newCoins - coins}\nNew Balance: ${newCoins}\n${triBackTick}`)

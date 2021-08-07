@@ -1,6 +1,6 @@
 const mongo = require('../../mongo')
 const warnSchema = require('../../schemas/warn-schema')
-const Discord = require('discord.js')
+const DiscordJS = require('discord.js')
 
 module.exports = {
     commands: [
@@ -36,13 +36,13 @@ module.exports = {
                 })
 
                 if (results === null) {
-                    message.channel.send(new Discord.MessageEmbed()
+                    message.channel.send(new DiscordJS.MessageEmbed()
                     .setColor("#009206")
                     .setDescription(':+1: Clean Record!'))
                     return
                 }
 
-                let reply = new Discord.MessageEmbed()
+                let reply = new DiscordJS.MessageEmbed()
                 .setColor('#E9A822')
                 .setDescription(`**Infrations for <@${userId}>:**`)
 

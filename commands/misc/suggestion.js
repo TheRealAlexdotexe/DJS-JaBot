@@ -1,7 +1,7 @@
 const channelId ='817498192740089877'
 const backTick = '`'
 const triBackTick = '```'
-const Discord = require('discord.js')
+const DiscordJS = require('discord.js')
 const em1 = '✅'
 const em2 = '❌'
 
@@ -15,7 +15,7 @@ module.exports = {
         const { guild, member } = message
 
         const channel = guild.channels.cache.get(channelId)
-        const embed = new Discord.MessageEmbed()
+        const embed = new DiscordJS.MessageEmbed()
         .setDescription(`**Suggestion Created By *<@${message.author.id}>!***`)
         .setThumbnail(message.author.avatarURL())
         .addField(':white_check_mark: or :x:', `${triBackTick}${text}${triBackTick}`)
