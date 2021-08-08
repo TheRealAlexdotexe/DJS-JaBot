@@ -27,7 +27,7 @@ module.exports = {
                     .addFields(
                         { name: 'You are level', value: `${results.level}!`},
                         { name: 'Your salary is', value: `${results.level ** 2 * 50} per session!` },
-                        { name: `You have ${results.xp} xp!`, value: `You need ${(results.level ** 2 * 100) - results.xp}`}
+                        { name: `You have ${results.xp} xp!`, value: `You need ${(results.level ** 2 * 100) - results.xp} more xp in order to level up again!`}
                     ) 
                     )
                 }
