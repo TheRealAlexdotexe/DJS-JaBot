@@ -1,11 +1,14 @@
 const loadCommands = require('./load-commands')
 const { prefix } = require('../config.json')
+const DiscordJS = require('discord.js')
 
 module.exports = {
   commands: ['help', 'h'],
   description: "This!",
   callback: (message, arguments, text) => {
-    let reply = 'Here is a list of all current commands.\n\n'
+    let reply = new DiscordJS.MessageEmbed()
+    .setColor('#00FF00')
+    .setTitle('Here is a list of all commands')
 
     const commands = loadCommands()
 
@@ -39,7 +42,11 @@ module.exports = {
       const args = command.expectedArgs ? ` ${command.expectedArgs}` : ''
       const { description } = command
 
-      reply += `**${prefix}${mainCommand}${args}** = ${description} Aliases :${command.commands}\n`
+      // reply += `**${prefix}${mainCommand}${args}** = ${description} Aliases :${command.commands}\n`
+
+      reply
+      .addField(`**${prefix}${mainCommand}${args}**`, `${description}\nAliases : ${command.commands}`)
+
     }
 
     message.channel.send(reply)
