@@ -18,7 +18,7 @@ module.exports = {
             userId: message.author.id
         })
 
-        const coinsEarned = results.level * results.level * results.level
+        const coinsEarned = results.level ** 2 * 50
 
         const newBalance = economy.addCoins(message.guild.id, message.author.id, coinsEarned)
 
