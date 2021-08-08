@@ -1,6 +1,7 @@
 const levels = require('../../levels')
 const jobSchema = require('../../schemas/job-schema')
 const mongo = require('../../mongo')
+const DiscordJS = require('discord.js')
 
 module.exports = {
     commands: ['rank', 'level'],
@@ -21,7 +22,14 @@ module.exports = {
                     message.reply('That user is unemployed!')
                     return
                 } else {
-                    message.reply(`You are level ${results.level}! (<:JB_Coin:874023062960472085> Salary: ${results.level * results.level * results.level})`)
+                    message.reply(new DiscordJS.MessageEmbed()
+                    .setColor('RANDOM')
+                    .addFields(
+                        { name: 'You are level', value: `${results.level}!`},
+                        { name: 'Your salary is', value: `${results.level ** 2 * 50} per session!` },
+                        { name: `You have ${results.xp} xp!`, value: `You need ${(results.level ** 2 * 100) - results.xp}`}
+                    ) 
+                    )
                 }
             } finally {
                 mongoose.connection.close()
