@@ -12,6 +12,7 @@
   "dependencies": {
     "colors": "^1.4.0",
     "discord.js": "^12.5.3",
+    "fs": "0.0.1-security",
     "mathjs": "^9.4.4",
     "mongoose": "^5.13.3",
     "random": "^3.0.6",

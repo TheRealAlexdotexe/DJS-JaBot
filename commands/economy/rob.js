@@ -29,7 +29,7 @@ module.exports = {
             embed
             .setColor('#FF0000')
             .setTitle('🚨 You got caught! 🚨')
-            .setDescription(`You have been fined ${fine} coins!`)
+            .setDescription(`<:JB_Coin:874023062960472085> You have been fined ${fine} coins!`)
         } else {
             coinsStole = random.int((min = 200), (max = 400))
             const targetCoins = await economy.getCoins(message.guild.id, target.id)
@@ -41,7 +41,7 @@ module.exports = {
     
             embed
             .setColor('#00FF00')
-            .setTitle(`Successfully stole ${coinsStole} coins!`)
+            .setTitle(`<:JB_Coin:874023062960472085> Successfully stole ${coinsStole} coins!`)
             .setDescription('The police might be on your tail :eyes:')
         }
         

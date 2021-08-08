@@ -8,7 +8,7 @@ module.exports = {
     cooldown: 30,
     callback: async (message) => {
         let coinsToGive = 0
-        const msgs = require('../../beg.json')
+        const msgs = require('../../json/beg.json')
 
         if (random.boolean() === false) {
             var pronoun = 'He'
@@ -27,7 +27,7 @@ module.exports = {
             var embed = new DiscordJS.MessageEmbed()
             .setColor('RANDOM')
             .setTitle(`"${msgs.good.goodmessages[Math.floor(Math.random() * msgs.good.goodmessages.length)]}"`)
-            .setDescription(`You got ${coinsToGive} coins!`)
+            .setDescription(`<:JB_Coin:874023062960472085> You got ${coinsToGive} coins!`)
         }
 
         const newBalance  = await economy.addCoins(message.guild.id, message.author.id, coinsToGive)

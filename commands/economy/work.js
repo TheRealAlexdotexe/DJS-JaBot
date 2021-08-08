@@ -25,7 +25,7 @@ module.exports = {
         const embed = new DiscordJS.MessageEmbed()
         .setColor('RANDOM')
         .setTitle(`You went to work!`)
-        .setDescription(`You earned ${coinsEarned} coins!`)
+        .setDescription(`<:JB_Coin:874023062960472085> You earned ${coinsEarned} coins!`)
 
         message.reply(embed)
     }

@@ -32,7 +32,7 @@ module.exports = {
         const triBackTick = '```'
         const replyEmbed = new DiscordJS.MessageEmbed()
         .setColor("#009206")
-        .setDescription(`Successfully added ${coins} to <@${userId}>'s wallet!`)
+        .setDescription(`<:JB_Coin:874023062960472085> Successfully added ${coins} to <@${userId}>'s wallet!`)
         .addField('Balance:', `${triBackTick}\nOld Balance: ${newCoins - coins}\nNew Balance: ${newCoins}\n${triBackTick}`)
 
         message.reply(replyEmbed)

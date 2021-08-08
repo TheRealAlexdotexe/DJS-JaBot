@@ -41,7 +41,7 @@ module.exports = {
 
     const coinsOwned = await economy.getCoins(guild.id, member.id)
     if (coinsOwned < coinsToGive) {
-      message.reply(`You do not have ${coinsToGive} coins!`)
+      message.reply(`<:JB_Coin:874023062960472085> You do not have ${coinsToGive} coins!`)
       return
     }
 
@@ -55,7 +55,7 @@ module.exports = {
     const triBackTick = '```'
     const successEmbed = new DiscordJS.MessageEmbed()
     .setColor("#009206")
-    .setTitle(`Successfully gave ${coinsToGive} coins`)
+    .setTitle(`<:JB_Coin:874023062960472085> Successfully gave ${coinsToGive} coins!`)
     .addFields(
       { name: 'Their Balance:', value: `${triBackTick}\nOld Balance: ${newBalance - coinsToGive}\nNew Balance: ${newBalance}\n${triBackTick}` },
       { name: 'Your Balance:', value: `${triBackTick}\nOld Balance: ${remainingCoins + coinsToGive}\nNew Balance: ${remainingCoins}\n${triBackTick}`}
