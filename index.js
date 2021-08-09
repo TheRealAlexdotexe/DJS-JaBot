@@ -7,7 +7,12 @@ const colors = require('colors')
 const path = require('path')
 const fs = require('fs')
 const DiscordJS = require('discord.js')
-const client = new DiscordJS.Client()
+const intents = [
+  DiscordJS.Intents.FLAGS.DIRECT_MESSAGES,
+  DiscordJS.Intents.FLAGS.DIRECT_MESSAGE_REACTIONS,
+  DiscordJS.Intents.FLAGS.GUILD_BANS
+]
+const client = new DiscordJS.Client({ intents:  intents})
 const antiAd = require('./anti-ad')
 const config = require('./config.json')
 const loadCommands = require('./commands/load-commands')
